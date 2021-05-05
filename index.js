@@ -154,8 +154,8 @@ app.post('/getList', async (req, res) => {
 
       var id = Math.floor(Math.random() * 1000000000) + 1;
 
-    fs.writeFileSync(`./outputs/${id}.json`, JSON.stringify(array, null, 2));
-    console.log('\x1b[32m', `\nScrapy realizado com sucesso! Abra o arquivo "${id}.json"`)
+      fs.writeFileSync(`./outputs/${id}.json`, JSON.stringify(array, null, 2));
+      console.log('\x1b[32m', `\nScrapy realizado com sucesso! Abra o arquivo "${id}.json"`)
       return res.send({erro: false, status: 200, data: array})
 
     } else {
