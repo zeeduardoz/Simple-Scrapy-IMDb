@@ -1,0 +1,43 @@
+<div class="container">
+ <h1><i class="fas fa-video"></i> &nbsp;&nbsp;Web Scraping Movies</h1>
+ <p>Aplicação de estudo, para a captação de dados de filmes, atravez do <a href="https://www.imdb.com">IMDB</a></p>
+
+ <hr>
+
+ <div class="header justify-content-start-between">
+  <span>
+   <h2>Tutorial básico</h2>
+   <div>
+    <p>Va até o site <a href="https://www.imdb.com">IMDB</a>, selecione um filme, série ou animação e copie o id que aparece na URL</p>
+    <img src="https://i.imgur.com/qftY7qP.png">
+   </div>
+   <br>
+   <div>
+    <p>Cole o ID copiado na caixa de texto ao lado.</p>
+    <p>Pode colocar quantos ID's quiser, eles devem ser separados por ','</p>
+    <img src="https://i.imgur.com/cCDw4yh.png">
+    <img src="https://i.imgur.com/W1axokp.png">
+   </div>
+  </span>
+  <span>
+   <textarea name="list" id="list" cols="30" rows="10" placeholder="Informe o ID dos filmes aqui dentro. Ex: tt0241527, tt1201607"></textarea>
+   <button onclick="scrapingExe()">SCRAPING</button>
+  </span>
+ </div>
+
+ <hr>
+
+ <h1 id="pre-content"><i class="fas fa-info"></i> &nbsp;&nbsp;Dados retornados</h1>
+
+ <div class="content">
+  <div class="loader">
+   <div></div>
+   <div></div>
+   <div></div>
+   <div></div>
+   <div></div>
+  </div>
+
+  <div id="list-movies"></div>
+ </div>
+</div>
