@@ -25,11 +25,15 @@ async function scrapingExe() {
 
    const movie = `<div id="movie">
      <div class="justify-content-start-between">
-      <div>
-       <h2>${response.data.data[m].filme}</h2>
-       <p>Avaliação: <b style="color: orange;">${response.data.data[m].avaliacao}</b></p>
-       <p>Data de Lançamento: <b>${response.data.data[m].data_lancamento}</b></p>
-      </div>
+        <div class="movie__info">
+          <img src="${response.data.data[m].capa}" title="${response.data.data[m].filme}">
+          <div class="movie__text">
+            <h2>${response.data.data[m].filme}</h2>
+            <p>Avaliação: <b style="color: orange;">${response.data.data[m].avaliacao}</b></p>
+            <p>Data de Lançamento: <b>${response.data.data[m].data_lancamento}</b></p>
+            <a href="https://www.imdb.com${response.data.data[m].trailer}" target="blank" class="trailer"><i class="fas fa-play"></i>&nbsp;&nbspTrailer</a>
+          </div>
+        </div>
 
       <div class="justify-content-start-between" id="elenco-${m}">
       </div>
@@ -46,11 +50,14 @@ async function scrapingExe() {
 
         const person = `
         <span>
-          <img src="${e.foto}" width="200">
-          <div>
-            <p><b>${e.nome}</b></p>
-            <p>"${e.personagem}"</p>
-          </div>
+          <a href="https://www.imdb.com${e.link}" target="blank">
+            <img src="${e.foto}" width="200">
+            <div>
+              <p><b>${e.nome}</b></p>
+              <p>"${e.personagem}"</p>
+
+            </div>
+          </a>
         </span>
         `
 

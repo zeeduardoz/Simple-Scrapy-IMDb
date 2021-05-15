@@ -2,6 +2,10 @@
  padding: 25px 200px;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1 {
  color: rgb(0, 0, 34);
  font-family: 'Roboto';
@@ -192,4 +196,24 @@ textarea:focus {
 
 #movie span p {
   font-size: 15px;
+}
+
+.movie__info {
+  display: flex;
+  margin: 2rem auto;
+}
+
+.movie__text {
+  margin: auto;
+  margin-left: 1rem;
+}
+
+.trailer {
+  color: rgb(141, 141, 217);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.toast-message {
+  font-family: 'Roboto';
 }
